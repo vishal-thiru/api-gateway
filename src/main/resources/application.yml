@@ -1,0 +1,13 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name= api-gateway
+
+zuul:
+  sensitiveHeaders: Cookie,Set-Cookie,
+  routes:
+    people-services:
+      path: /people-services/**
+      serviceId: http://localhost:8080/
