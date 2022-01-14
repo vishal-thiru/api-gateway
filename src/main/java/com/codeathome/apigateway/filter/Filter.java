@@ -34,7 +34,6 @@ public class Filter  extends ZuulFilter{
 	    HttpServletRequest request = ctx.getRequest();
 
 	    log.info("PreFilter: " + String.format("%s request to %s", request.getMethod(), request.getRequestURL().toString()));
-	    
 	    return null;
 	  }
 
